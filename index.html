@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard and Mouse Events Example</title>
+    <style>
+        .draggable {
+            width: 100px;
+            height: 30px;
+            background-color: lightblue;
+            margin: 10px;
+            text-align: center;
+            line-height: 30px;
+            cursor: move;
+            user-select: none; /* Prevent text selection during drag */
+        }
+        .droppable {
+            width: 150px;
+            height: 150px;
+            background-color: lightgreen;
+            margin: 10px;
+            padding: 10px;
+        }
+        .dragging {
+            opacity: 0.5; /* Visual indication of dragging */
+        }
+        .dragover {
+            border: 2px dashed red; /* Visual indication of drag over */
+        }
+    </style>
+</head>
+<body>
+    <div id="list1" class="droppable" aria-label="List 1">
+        <div class="draggable" tabindex="0" draggable="true">Item 1</div>
+        <div class="draggable" tabindex="0" draggable="true">Item 2</div>
+        <div class="draggable" tabindex="0" draggable="true">Item 3</div>
+    </div>
+
+    <div id="list2" class="droppable" aria-label="List 2">
+        <!-- Droppable area -->
+    </div>
+
+    <div id="status" role="alert">Status: </div>
+
+    <script src="index.js">
+        // JavaScript code goes here
+    </script>
+</body>
+</html>
